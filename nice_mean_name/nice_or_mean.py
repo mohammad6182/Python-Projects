@@ -7,7 +7,7 @@ def start(nice=0, mean=0, name=""):
 
 
 
-def describe_game():
+def describe_game(name):
     """
         check if this is new game or not.
         if it is new, get the users name.
@@ -33,7 +33,7 @@ def describe_game():
     return name
 
 
-def nice_mean():
+def nice_mean(nice,mean,name):
     stop= True
     while stop:
         show_score(nice, mean, name)
