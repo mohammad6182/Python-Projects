@@ -10,6 +10,9 @@ class vehicle:
         entry_engine = input("what type of engine this vehicle has?")
         entry_fuel = input("what type of fuel does this vehicle use?")
 
+    
+    
+
 
 new_vehicle = vehicle()
 new_vehicle.information()
