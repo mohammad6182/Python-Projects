@@ -18,22 +18,6 @@ class Employee:
 
 
 
-#parent class customer
-
-class Customer:
-    name = "Mark Jones"
-    order_id = "T-1221"
-    state = "Californi"
-
-
-    def orderStatus(self):
-        entry_name = input("please enter your name: >>>")
-        entry_order_id = input("Order Id: ")
-        entry_state = input("Destination: ")
-        if(entry_name==self.name and entry_order_id==self.order_id):
-            print("Your order has been sent and further information will be send to your email address")
-        else:
-            print("We cannot find your order information, please give us 24 hour to update your order status or call us")
     
 
 
@@ -57,19 +41,30 @@ class Group1(Employee):
 
 
 
-#child class order
-class Order(Customer):
-    order_date = "02/01/2022"
-    order_code = "334434"
+#child class quality management
+            
+class quality_managment(Employee):
 
-    def orderStatus(self):
-        entry_id = input("Order ID:  ")
-        entry_date = input("When did you submit your order?")
-        entry_code = input("what is your order code?")
-        if(entry_id == self.order_id and entry_code == self.ordr_code):
-            print("Your order has been submited")
-        else:
-            print("We cannot find your order, please contact customer service")
+    def workShiftInfo(self):
+        badge = ''
+        name = 'Alex'
+        department = 'QC'
+        
+        
+    entry_name=("what is your name?")
+    badge_number =("Badge Number:>> ")
+    entry_schedule = ("what is your schedule code?")
+    if(entry_name == self.name and entry_department == self.department and badge_number == self.badge):
+        print("Welcome {} , your shift is starting in 30 minutes.".format(entry_name))
+    else:
+        print(" {} , Please see your manager. Thank you!".format(entry_name))
+
+
+
+
+
+if __init__ == "name":
+    
             
     
     
