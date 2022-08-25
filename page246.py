@@ -51,9 +51,9 @@ class quality_managment(Employee):
         department = 'QC'
         
         
-    entry_name=("what is your name?")
-    badge_number =("Badge Number:>> ")
-    entry_schedule = ("what is your schedule code?")
+    entry_name= input("what is your name?")
+    badge_number =input("Badge Number:>> ")
+    entry_schedule = input("what is your schedule code?")
     if(entry_name == self.name and entry_department == self.department and badge_number == self.badge):
         print("Welcome {} , your shift is starting in 30 minutes.".format(entry_name))
     else:
@@ -64,6 +64,13 @@ class quality_managment(Employee):
 
 
 if __init__ == "name":
+
+    emp = Employee()
+    emp.workShiftInfo()
+    group = Group1()
+    group.workShiftInfo()
+    manager = quality_management()
+    manager.workShiftInfo()
     
             
     
