@@ -3,7 +3,7 @@
 
 class Employee:
 
-    name = "John"
+    name = ""
     rank = "M-11"
     schedule = "MJ2"
 
@@ -34,7 +34,7 @@ class Group1(Employee):
         entry_name = input("what is your name?")
         entry_department = input("Department:  ")
         entry_access_code = input("what is your access code?")
-        if(entr_name ==self.name and entry_access_code == self.Access_code):
+        if(entry_name ==self.name and entry_access_code == self.Access_code):
             print("Welcome {} , yourshift is starting now".format(entry_name))
         else:
             print(" {}, please talk to a manager about your shift.".format(entry_name))
@@ -43,34 +43,31 @@ class Group1(Employee):
 
 #child class quality management
             
-class quality_managment(Employee):
+class quality_management(Employee):
 
-    def workShiftInfo(self):
-        badge = ''
-        name = 'Alex'
-        department = 'QC'
+    badge = ''
+    name = ''
+    department = 'QC'
         
-        
-    entry_name= input("what is your name?")
-    badge_number =input("Badge Number:>> ")
-    entry_schedule = input("what is your schedule code?")
-    if(entry_name == self.name and entry_department == self.department and badge_number == self.badge):
-        print("Welcome {} , your shift is starting in 30 minutes.".format(entry_name))
-    else:
-        print(" {} , Please see your manager. Thank you!".format(entry_name))
+    def workShiftInfo(self):   
+        entry_name= input("what is your name?")
+        badge_number =input("Badge Number:>> ")
+        entry_schedule = input("what is your schedule code?")
+        if(entry_name == self.name and entry_department == self.department and badge_number == self.badge):
+            print("Welcome {} , your shift is starting in 30 minutes.".format(entry_name))
+        else:
+            print(" {} , Please see your manager. Thank you!".format(entry_name))
 
 
 
 
 
-if __init__ == "name":
-
-    emp = Employee()
-    emp.workShiftInfo()
-    group = Group1()
-    group.workShiftInfo()
-    manager = quality_management()
-    manager.workShiftInfo()
+emp = Employee()
+emp.workShiftInfo()
+group = Group1()
+group.workShiftInfo()
+manager = quality_management()
+manager.workShiftInfo()
     
             
     
