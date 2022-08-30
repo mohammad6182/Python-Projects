@@ -1,4 +1,4 @@
-from abc import ABC, abstarctmethode
+from abc import ABC, abstractmethod
 
 class Mall(ABC):
     def coupon(self, amount):
