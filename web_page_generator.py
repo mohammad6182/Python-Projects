@@ -11,6 +11,15 @@ class ParentWindow(Frame):
         self.btn=Button(self.master, text="Default HTML Page", width=30, height=2, command = self.defaultHTML)
         self.btn.grid(padx=(10,10), pady=(10,10))
 
+    def CustomText(self):
+        selectCustomText = tkinter.filedialog.askdirectory()
+        self.custom_text.delete(0,END)
+        self.custom_text.insert(0, selectSourceDir)
+        customtext = input("Enter custom text or click the Default HTML page button")
+        
+
+     
+
 
     def defaultHTML(self):
         htmlText= "Stay tuned for our amazing summer sale!"
@@ -19,6 +28,18 @@ class ParentWindow(Frame):
         htmlFile.write(htmlContent)
         htmlFile.close()
         webbrowser.open_new_tab("index.html")
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    App = ParentWindow(root)
+    root.mainloop()
 
 
 
