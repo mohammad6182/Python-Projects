@@ -14,16 +14,8 @@ class ParentWindow(Frame):
         self.transfer_btn.grid(row=2, column=1, padx=(200,0), pady=(0,15))
         self.exit_btn = Button(text="Exit", width = 20, command= self.exit_program)
 
-
-    def sourceDir(self):
-        selectSourceDir = tkinter.filedialog.askdirectory()
-        self.source_dir.delete(0,END)
-        self.source_dir.insert(0, selectSourceDir)
-
-
-
-
-        # creates button to select files from source directory
+        #####################################
+                # creates button to select files from source directory
         self.sourceDir_btn = Button(text="Select Source", width=20, command=self.sourceDir)
 
         #positions source button in GUI using tkinter grid()
@@ -37,6 +29,13 @@ class ParentWindow(Frame):
         #the button to ensure they will line up
 
         self.source_dir.grid(row = 0, column = 1, columnspan=2, padx=(20,10), pady=(30,0))
+
+
+    def sourceDir(self):
+        selectSourceDir = tkinter.filedialog.askdirectory()
+        self.source_dir.delete(0,END)
+        self.source_dir.insert(0, selectSourceDir)
+
 
 
 
