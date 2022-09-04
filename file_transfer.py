@@ -29,12 +29,23 @@ class ParentWindow(Frame):
         #the button to ensure they will line up
 
         self.source_dir.grid(row = 0, column = 1, columnspan=2, padx=(20,10), pady=(30,0))
+        self.destDir_btn=Button(text="Select Destination", width=20, command=self.destDir)
+        self.destDir_btn.grid(row=1, column = 0, padx=(20,10),pady=(15,10))
+        self.destination_dir= Entry(width=75)
+        self.destination_dir.grid(row=1, column=1, columnspan=2, padx=(20,10), pady=(15,10))
+        
 
 
     def sourceDir(self):
         selectSourceDir = tkinter.filedialog.askdirectory()
         self.source_dir.delete(0,END)
         self.source_dir.insert(0, selectSourceDir)
+
+
+    def destDir(self):
+        selectDestDir=tkinter.filedialog.askdirectory()
+        self.destination_dir.delet(0, END)
+        self.destination_dir.insert(0, selectDestDir)
 
 
 
