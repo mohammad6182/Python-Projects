@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import *
 import webbrowser
+import tkinter.simpledialog
+
 
 
 
@@ -9,20 +11,30 @@ class ParentWindow(Frame):
         Frame.__init__(self, master)
         self.master.title("Web page Generator")
         self.btn=Button(self.master, text="Default HTML Page", width=30, height=2, command = self.defaultHTML)
-        self.btn.grid(padx=(10,10), pady=(10,10))
+        self.btn.grid(row= 1, column= 0,padx=(10,10), pady=(10,10))
 
-    def CustomText(self):
-        selectCustomText = tkinter.filedialog.askdirectory()
+        self.CustomText_btn = Button(text="Submit Custom Text", width=30,height=2, command=self.CustomText)
+        self.CustomText_btn.grid(row = 1, column = 1, padx=(10,10), pady=(10,10))
+
+        self.textEntry=Entry(self.master)
+        self.textEntry.grid(row =0, column = 0,columnspan = 3, padx = (10,10), pady=(10,10))
+        self.btn = Button(self.master, text="Enter Custom Text or click the Default HTML page button", width=70, command = self.defaultHTML)
+        
+                            
+        
+
+    def CustomText():
+        CustomText=self.textEntry.get()
         self.custom_text.delete(0,END)
         self.custom_text.insert(0, selectSourceDir)
-        customtext = input("Enter custom text or click the Default HTML page button")
+        
         
 
      
 
 
     def defaultHTML(self):
-        htmlText= "Stay tuned for our amazing summer sale!"
+        htmlText= "Hello and Thank you for Being too lazy to type anything :)!"
         htmlFile=open("index.html","w")
         htmlContent="<html>\n<body>\n<h1>" + htmlText + "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
