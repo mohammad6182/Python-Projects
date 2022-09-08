@@ -69,12 +69,7 @@ class ParentWindow(Frame):
         self.destination_dir.delete(0,END)
         self.destination_dir.insert(0, selectDestDir)
 
-        self.destDir_btn = Button(text="Select Destination", width=20, command=self)
 
-        self.destDir_btn.grid(row = 1, column=0, padx=(20,10), pady=(15,10))
-
-        self.destination_dir= Entry(width=75)
-        self.destination_dir.grid(row=1, column=1, columnspan=2, padx=(20,10), pady=(15,10))
 
 
 if __name__ == "__main__":

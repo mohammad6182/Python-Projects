@@ -24,10 +24,14 @@ class ParentWindow(Frame):
         
 
     def CustomText():
-        CustomText=self.textEntry.get()
-        self.custom_text.delete(0,END)
-        self.custom_text.insert(0, selectSourceDir)
-        
+        CustomText= self.textEntry.get()
+        htmlText= CustomText
+        htmlFile=open("index.html","w")
+        htmlContent="<html>\n<body>\n<h1>"+ htmlText+ "</h1>\n</body>\n</html>"
+        htmlFile.write(htmlContent)
+        htmlFile.close()
+        webbrowser.open_new_tab("index.html")
+
         
 
      
