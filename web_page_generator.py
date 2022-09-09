@@ -23,9 +23,9 @@ class ParentWindow(Frame):
                             
         
 
-    def CustomText():
-        CustomText= self.textEntry.get()
-        htmlText= CustomText
+    def CustomText(self):
+        my_text= self.textEntry.get()
+        htmlText= my_text
         htmlFile=open("index.html","w")
         htmlContent="<html>\n<body>\n<h1>"+ htmlText+ "</h1>\n</body>\n</html>"
         htmlFile.write(htmlContent)
