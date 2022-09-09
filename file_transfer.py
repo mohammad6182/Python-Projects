@@ -3,6 +3,8 @@ from tkinter import *
 import tkinter.filedialog
 import os
 import shutil
+import time
+
 
 
 class ParentWindow(Frame):
@@ -50,7 +52,10 @@ class ParentWindow(Frame):
         destination = self.destination_dir.get()
         source_files = os.listdir(source)
         for i in source_files:
-            shutil.move(source + '/' +i, destination)
+            path = os.path.abspath(source)+ '/' + i
+            if (time.time()-os.path.getmtime(path))< 86400:
+                shutil.move(source + '/' +i, destination)
+                print(i)
 
 
 
